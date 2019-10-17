@@ -10,14 +10,14 @@ export const Demo = () => (
 		<ul className="list-group">
 			<Consumer>
 				{({ store, actions }) => {
-					return store.demo.map((item, index) => {
+					return store.events.map((item, index) => {
 						return (
 							<li
 								key={index}
 								className="list-group-item d-flex justify-content-between"
 								style={{ background: item.background }}>
 								<Link to={"/single/" + index}>
-									<span>Link to: {item.title}</span>
+									<span>Link to: {item.post_content}</span>
 								</Link>
 								{// Conditional render example
 								// Check to see if the background is orange, if so, display the message
